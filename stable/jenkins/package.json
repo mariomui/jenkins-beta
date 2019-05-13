@@ -1,0 +1,20 @@
+{
+  "name": "jenkins",
+  "version": "1.0.0",
+  "description": "Jenkins master and slave cluster utilizing the Jenkins Kubernetes plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jenkins:setYamlValue": "sh ./helperfiles/setyaml/setYaml.sh values.yaml",
+    "jenkins:getPassword": "sh ./helperfiles/jenkinsPasswordGetter.sh",
+    "jenkins:flush": "sh ./helperfiles/flush.sh",
+    "jenkins:getAccessPoint": "sh ./helperfiles/getAccessPoint.sh",
+    "jenkins:getCurrentNs": "echo $(kubectl get sa default -o jsonpath='{.metadata.namespace}')",
+    "jenkins:setCurrentNs": "kubectl config set-context $(kubectl config current-context) --namespace=$NS",  
+    "jenkins:startup": "sh $(pwd)/helperfiles/startup.sh",
+    "teste": "sh ./helperfiles/learningbash/test.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

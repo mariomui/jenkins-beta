@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: apple-pv
+  namespace: apple
+spec:
+  storageClassName: apple-pv
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 20Gi
+  persistentVolumeReclaimPolicy: Delete
+  hostPath:
+    path: /data/jenkins-volume
