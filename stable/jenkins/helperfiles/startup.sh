@@ -124,7 +124,7 @@ while $flag;
 
   kubectl get pv
   
-  setYaml "./values.yaml" storageClassName "$namespace-pv"
+  # setYaml "./values.yaml" storageClassName "$namespace-pv"
   # setYaml "../values.yaml" name "$namespace-pv"
   
   helm install --name $namespace -f ../values.yaml stable/jenkins --namespace=$namespace

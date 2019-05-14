@@ -1,4 +1,5 @@
 learningbash/*
 .env
-*/pv/*
-*/yaml/*
+
+*namespace.yaml
+*pv.yaml
